@@ -9,25 +9,25 @@
                         <!-- First Name -->
                         <div class="col-md-6">
                             <label class="form-label">First Name*</label>
-                            <input type="text" class="form-control" name="first_name" aria-label="First name" value="<?php echo isset($user_profile_data['first_name']) ? $user_profile_data['first_name'] : ''; ?>">
+                            <input type="text" class="form-control" name="first_name" aria-label="First name" value="<?php echo set_value('first_name', isset($user_profile_data['first_name']) ? $user_profile_data['first_name'] : ''); ?>">
                             <small class="text-danger"><?php echo form_error('first_name'); ?></small>
                         </div>
                         <!-- Last name -->
                         <div class="col-md-6">
                             <label class="form-label">Last Name*</label>
-                            <input type="text" class="form-control" name="last_name" aria-label="Last name" value="<?php echo isset($user_profile_data['last_name']) ? $user_profile_data['last_name'] : ''; ?>">
+                            <input type="text" class="form-control" name="last_name" aria-label="Last name" value="<?php echo set_value('last_name', isset($user_profile_data['last_name']) ? $user_profile_data['last_name'] : ''); ?>">
                             <small class="text-danger"><?php echo form_error('last_name'); ?></small>
                         </div>
                         <!-- Phone number -->
                         <div class="col-md-6">
                             <label class="form-label">Phone number*</label>
-                            <input type="number" class="form-control" name="phone_number" aria-label="Phone number" value="<?php echo isset($user_profile_data['phone_number']) ? $user_profile_data['phone_number'] : ''; ?>">
+                            <input type="number" class="form-control" name="phone_number" aria-label="Phone number" value="<?php echo set_value('phone_number', isset($user_profile_data['phone_number']) ? $user_profile_data['phone_number'] : ''); ?>">
                             <small class="text-danger"><?php echo form_error('phone_number'); ?></small>
                         </div>
                         <!-- Email -->
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Email*</label>
-                            <input type="email" class="form-control" id="inputEmail4" name="email_id" value="<?php echo isset($user_profile_data['email_id']) ? $user_profile_data['email_id'] : ''; ?>">
+                            <input type="email" class="form-control" id="inputEmail4" name="email_id" value="<?php echo set_value('email_id', isset($user_profile_data['email_id']) ? $user_profile_data['email_id'] : ''); ?>">
                             <small class="text-danger"><?php echo form_error('email_id'); ?></small>
                         </div>
                         <!-- Country -->
@@ -73,7 +73,7 @@
                         <!-- Pincode -->
                         <div class="col-md-6">
                             <label class="form-label">Pincode*</label>
-                            <input type="number" class="form-control" name="pin_code" aria-label="Pin Code" value="<?php echo isset($user_profile_data['pin_code']) ? $user_profile_data['pin_code'] : ''; ?>">
+                            <input type="number" class="form-control" name="pin_code" aria-label="Pin Code" value="<?php echo set_value('pin_code', isset($user_profile_data['pin_code']) ? $user_profile_data['pin_code'] : ''); ?>">
                             <small class="text-danger"><?php echo form_error('pin_code'); ?></small>
                         </div>
                     </div> <!-- Row END -->
