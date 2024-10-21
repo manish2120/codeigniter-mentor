@@ -61,7 +61,7 @@ class Register extends CI_Controller {
   // Backend - Gets the registered users data for datatables
   public function display_registered_users() {
     $data['users'] = $this->User->getAllRegisteredUsers();
-    $this->load->view('admin/pages/registered_users', $data);
+    $this->load->view('admin/pages/registered_users', $data); // passing registered user data to the view file
   }
 }
 ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2024 at 12:13 PM
+-- Generation Time: Oct 21, 2024 at 03:56 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -80,7 +80,15 @@ INSERT INTO `register_form` (`id`, `user_name`, `email_id`, `password`, `created
 (33, 'Peter', 'peterparker110@gmail.com', '', '2024-08-12 11:15:58'),
 (34, 'johnDoe', 'john12@gmail.com', '$2y$10$pzL4wb73EEdjKvkx817nxOmUJeUvuj0X2dt1v5DsJzrqNO7W.AOHC', '2024-08-14 01:09:12'),
 (35, 'adam', 'adam57@gmail.com', '', '2024-08-14 01:24:29'),
-(36, 'test', 'test155@gmail.com', '', '2024-08-14 04:05:36');
+(36, 'test', 'test155@gmail.com', '', '2024-08-14 04:05:36'),
+(37, 'benjamin', 'benjamin12@gmail.com', '$2y$10$z2xqMMJll9rXVAZ8CtQ8XO/WwkNKNxnpBpMF0gHW98CeSSiG0b4We', '2024-08-14 11:32:01'),
+(38, 'testtt', 'testst19@gmail.com', '$2y$12$0bQBr9WDA91yyFgleLZBzupKJV.C.MwhhsL9mfnUpJ0n.cF9uDeJ6', '2024-08-23 01:12:49'),
+(39, 'testtting', 'tetstet17@gmail.com', '$2y$12$5qLoDbYPk017QAUC0mTrW.ia5gwOC16T6zeRDmkTwEshqTMWOxqTK', '2024-08-24 01:34:16'),
+(40, 'dan', 'dan15@gmail.com', '$2y$12$s44HWa/A7MCDLzyEQ547HOf135uKTrFnf1U6f64Op6VG077QG6mjm', '2024-08-25 09:03:36'),
+(41, 'daniel', 'daniel15@gmail.com', '$2y$12$yJsX1.hXvTA3aSCFu75pverIWf3UiXhn3imFzTeWyKTxHhP8vtZ3.', '2024-08-25 09:06:09'),
+(43, 'Ajay', 'ajay15@gmail.com', '$2y$12$vvrMp11h/hTyn.kgSk04.uqH8PdHKV6dXPdZvaGERdlL3vBgrS4H2', '2024-08-29 04:25:23'),
+(44, 'test', 'test177@gmail.com', '$2y$12$iC02o17sbjdA2wHSIt4SY.bDTVuvRADimgkVQBdIJwnIJznKI5sX6', '2024-08-29 22:37:22'),
+(45, 'vinayak', 'vinayak12@gmail.com', '$2y$12$ozlRWmvTass5998l2JSRn.4IPRFH8akK.PJqQ2Gxhz/1ec8ssW6BK', '2024-09-02 09:06:28');
 
 -- --------------------------------------------------------
 
@@ -6224,7 +6232,7 @@ INSERT INTO `user_profile_data` (`id`, `first_name`, `last_name`, `phone_number`
 (1, 'manish', 'test', 123456789, 'manish15@gmail.com', '101', '4008', '546', 421501, '', '2024-07-29 11:15:12', '2024-08-06 17:52:03', ''),
 (2, 'sarvi', 'solutions', 123456789, 'sarvi12@gmail.com', '101', '4008', '546', 410501, 'Screenshot_2023-08-06_11445177.png', '2024-07-30 08:52:01', '2024-08-06 17:52:14', ''),
 (3, 'sarvi', 'solutions', 123456789, 'sarvi20@gmail.com', '101', '4008', '546', 401521, 'Screenshot_2023-08-06_11445180.png', '2024-07-31 00:17:35', '2024-08-06 17:52:54', ''),
-(4, 'sarvi', 'solutions', 1234567891, 'sarvis10@gmail.com', '101', '4008', '545', 402501, 'Screenshot_2023-08-06_11445189.png', '2024-08-06 01:38:56', '2024-08-06 17:52:54', ''),
+(4, 'sarvi', 'solutions', 1234567891, 'sarvis10@gmail.com', '101', 'Select State', 'Select District', 402501, 'Screenshot_2023-08-06_11445189.png', '2024-10-21 09:55:21', '2024-10-21 09:55:21', ''),
 (5, 'sarvi', 'solutions', 123456789, 'sarvisolution10@gmail.com', '101', '4008', '545', 410502, 'Screenshot_2023-08-06_11445184.png', '2024-08-01 07:58:03', '2024-08-06 17:52:54', ''),
 (6, 'manish', 'chavan', 123456789, 'manish10@gmail.com', '101', '4008', '544', 402503, 'Screenshot_2023-08-06_11445186.png', '2024-08-01 11:27:17', '2024-08-06 17:52:54', ''),
 (7, 'manish', 'test', 1234567825, 'manishtest@gmail.com', '101', '4008', '546', 425102, 'Screenshot_2023-08-06_11445190.png', '2024-08-09 11:21:41', '2024-08-11 04:43:57', ''),
@@ -6277,17 +6285,13 @@ CREATE TABLE `vehicle_data` (
 --
 
 INSERT INTO `vehicle_data` (`id`, `user_id`, `user_name`, `vehicle_name`, `vehicle_number`, `created_at`, `updated_at`, `sort_order`, `status`) VALUES
-(5, 1002, 'Rahul', 'Select Vehicle', 'MH 11 CD 5740', 1723054100, 1723462354, 0, 0),
-(11, 24, 'Sa', 'Maruti Suzuki - Baleno', 'fbwfi23', 1723183647, 1723183647, 0, 0),
+(5, 1, 'manish', 'Four Wheeler', 'MH12CD5678', 1723054100, 1725287110, 0, 0),
 (18, 2, 'sarvi', 'Two Wheeler', 'MH 12 CD 5620', 1723194211, 1723194211, 0, 0),
-(21, 1, 'manish', 'Two Wheeler', 'MH12CD5655', 1723198961, 1723198961, 0, 0),
-(26, 25, 'testing', 'Four Wheeler', 'MH12CD5640', 1723436557, 1723436557, 0, 0),
-(32, 25, 'testing', 'Two Wheeler', 'MH12CD5678', 1723455509, 1723455509, 0, 0),
-(34, 28, 'manish', 'Two Wheeler', 'MH12CD5677', 1723469922, 1723469922, 0, 0),
-(36, 34, 'johnDoe', 'Two Wheeler', 'MH12CD5670', 1723611207, 1723611207, 0, 0),
-(37, 34, 'johnDoe', 'Two Wheeler', 'MH12CD5678', 1723614261, 1723614261, 0, 0),
-(38, 25, 'testing', 'Two Wheeler', 'MH12CD5678', 1723618701, 1723618701, 0, 0),
-(39, 25, 'testing', 'Four Wheeler', 'MH12CD5678', 1723618719, 1723618719, 0, 0);
+(21, 25, 'manish', 'Four Wheeler', 'MH12CD5655', 1723198961, 1724867818, 0, 0),
+(47, 34, 'johnDoe', 'Two Wheeler', 'MH12CD5677', 0, 0, 0, 0),
+(50, 2, 'sarvi', 'Two Wheeler', 'MH12CD5678', 0, 0, 0, 0),
+(51, 45, 'vinayak', 'Four Wheeler', 'MH12CD5678', 0, 0, 0, 0),
+(52, 1, 'manish', 'Two Wheeler', 'MH12CD5678', 0, 0, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -6356,7 +6360,7 @@ ALTER TABLE `admin_user`
 -- AUTO_INCREMENT for table `register_form`
 --
 ALTER TABLE `register_form`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `tbl_countries`
@@ -6392,7 +6396,7 @@ ALTER TABLE `vehicles_name`
 -- AUTO_INCREMENT for table `vehicle_data`
 --
 ALTER TABLE `vehicle_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

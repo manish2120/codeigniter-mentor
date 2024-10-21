@@ -118,6 +118,8 @@
     </div> <!-- Container END -->
 </form> <!-- Form END -->
 
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
 <script>
 // JQUERY WITH AJAX TO HANDLE DROPDOWN DATA STARTS
 $(document).ready(function() {

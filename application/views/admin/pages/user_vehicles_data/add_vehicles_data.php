@@ -49,7 +49,6 @@
                         </a>
                     </div>
                 </form>
-
                 <!-- Form Ends -->
             </div>
         </div>

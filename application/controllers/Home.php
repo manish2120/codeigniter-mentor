@@ -18,34 +18,38 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
-	public function index()
-	{
+
+	 // HOME PAGE
+	public function index() {
 		$page_data['page_title'] = "Home Page";
 		$this->load->view('header', $page_data);
 		$this->load->view('home');
 		$this->load->view('footer');
 	}
 
-	public function aboutUs()
-	{
+	// ABOUT US
+	public function aboutUs() {
 		$page_data['page_title'] = "About Us";
 		$this->load->view('header', $page_data);
 		$this->load->view('about');
 		$this->load->view('footer');
 	}
 	
-	public function contactUs()
-	{
+	// CONTACT US
+	public function contactUs() {
 		$page_data['page_title'] = "Contact Us";
 		$this->load->view('header', $page_data);
 		$this->load->view('contact');
 		$this->load->view('footer');
 	}
 
+	// CHANGE PASSWORD FORM PAGE
 	public function changePassword() {
 		$page_data['page_title'] = 'Reset Password - Mentor';
 		$this->load->view('change_password', $page_data);
 	}
+
+	// USER PROFILE PAGE
 	public function profile() {
 		$page_data['page_title'] = 'Profile - Mentor';
 		$this->load->view('header', $page_data);
@@ -53,30 +57,39 @@ class Home extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	// COURSES PAGE
 	public function courses() {
 		$page_data['page_title'] = 'Our Courses - Mentor';
 		$this->load->view('header', $page_data);
 		$this->load->view('courses');
 		$this->load->view('footer');
 	}
+
+	// COURSE DETAILS PAGE
 	public function courseDetails() {
 		$page_data['page_title'] = 'Our Courses - Mentor';
 		$this->load->view('header', $page_data);
 		$this->load->view('course_details');
 		$this->load->view('footer');
 	}
+
+	// TRAINERS PAGE
 	public function trainers() {
 		$page_data['page_title'] = 'Trainers - Mentor';
 		$this->load->view('header', $page_data);
 		$this->load->view('trainers');
 		$this->load->view('footer');
 	}
+
+	// EVENTS PAGE
 	public function events() {
 		$page_data['page_title'] = 'Events - Mentor';
 		$this->load->view('header', $page_data);
 		$this->load->view('events');
 		$this->load->view('footer');
 	}
+
+	//PRICING PAGE
 	public function pricing() {
 		$page_data['page_title'] = 'Pricing - Mentor';
 		$this->load->view('header', $page_data);
@@ -84,6 +97,7 @@ class Home extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	// DEFAULT WELCOME PAGE
 	public function welcome() {
 		$this->load->view('welcome_message');
 	}

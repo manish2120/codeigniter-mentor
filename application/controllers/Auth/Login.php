@@ -42,7 +42,7 @@ class Login extends CI_Controller {
                     'password' => $user->password
                 );
 
-                // session to authenticate the login user
+                // session to authenticate the login user with a boolean like value of 1
                 $this->session->set_userdata('authenticated', '1'); 
 
                 $this->session->set_userdata('auth_user', $user_details); // stores the email id and password
@@ -51,7 +51,7 @@ class Login extends CI_Controller {
                 $this->session->set_flashdata('alert_class', 'alert-success');
                 redirect(base_url('home')); // redirects to the home page
             } else {
-                // Password is incorrect
+                // Password is incorrect - set the status then redirects to login page.
                 $this->session->set_flashdata('status', 'Invalid Email ID or Password!');
                 $this->session->set_flashdata('alert_class', 'alert-danger');
                 redirect(base_url('Auth/Login/loginUser')); // redirects to the login page

@@ -15,15 +15,15 @@ class Profile extends CI_Controller {
         // Check if user data in session is exist or not
         if ($this->session->userdata('authenticated')) {
             // if session exist
-            $data['profile'] = $this->session->userdata('auth_user');
+            $data['profile'] = $this->session->userdata('auth_user'); 
             $data['countries'] = $this->Dropdown_model->fetch_countries();
 
-            // Fetch user profile data
+            // Fetch user profile data to get the data if user is already exist
             $user_profile_data = $this->Userdata_model->getUserProfileDataByEmail($this->session->userdata('auth_user')['email_id']);
             
             // Check if user profile data is available in the database
             if (!empty($user_profile_data)) {
-                $data = array_merge($data, ['user_profile_data' => $user_profile_data]);
+                $data = array_merge($data, ['user_profile_data' => $user_profile_data]); // merge user_profile_data with data variable array
             } else {
                 // If no profile data, initialize empty user profile array
                 $data['user_profile_data'] = [
@@ -78,11 +78,11 @@ class Profile extends CI_Controller {
             // If validation failed
             $this->index();
         } else {
-            $uploaded_image = $this->session->userdata('uploaded_image');
+            $uploaded_image = $this->session->userdata('uploaded_image'); // if uploaded profile image is already in session, store it in a variable
             $user_email = $this->session->userdata('auth_user')['email_id'];
     
             // Fetch existing profile data
-            $profile = $this->Userdata_model->getUserProfileDataByEmail($user_email);
+            $profile = $this->Userdata_model->getUserProfileDataByEmail($user_email); // Get the profile data
             $profile_image = (!empty($uploaded_image)) ? $uploaded_image : (isset($profile['profile_image']) ? $profile['profile_image'] : '');
     
             // Store the input data in an array format
@@ -125,7 +125,7 @@ class Profile extends CI_Controller {
             $states = $this->Dropdown_model->fetch_states($country_id);
             
             header('Content-Type: application/json'); // setting header to specify JSON format data is sent to the client
-            echo json_encode($states); // converts data into json
+            echo json_encode($states); // converts data into json and sends back to the ajax as a response
         } else {
             echo json_encode([]);
         }

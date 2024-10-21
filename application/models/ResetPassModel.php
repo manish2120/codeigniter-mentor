@@ -5,6 +5,7 @@ class ResetPassModel extends CI_Model {
         // Hashing new password to store it securely
         $hashedPassword = password_hash($newPassword, PASSWORD_BCRYPT); // Converts password in hash
 
+        // Store the hashed password
         $data = array(
             'password' => $hashedPassword
         );

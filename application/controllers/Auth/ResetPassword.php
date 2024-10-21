@@ -20,7 +20,7 @@ class ResetPassword extends CI_Controller {
             // Load the view with error messages
             $this->load->view('change_password');
         } else {
-            $email = $this->session->userdata('auth_user')['email_id'];
+            $email = $this->session->userdata('auth_user')['email_id']; // get the current login active session email id
             $currentPassword = $this->input->post('current_password');
             $newPassword = $this->input->post('new_password');
 

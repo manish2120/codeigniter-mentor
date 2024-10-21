@@ -28,7 +28,7 @@ class User_registered_data extends CI_Controller
   }
   // ends - loop on retrieved data to get the matching email id
 
-  $data['profiles'] = $profiles; // 
+  $data['profiles'] = $profiles;
 
   // Starts - Get the user selected dropdown data
   $data['countries'] = $this->Dropdown_model->fetch_user_selected_countries($profiles[$email_id]['country']);
